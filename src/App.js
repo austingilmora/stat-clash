@@ -118,16 +118,34 @@ function App() {
     games.forEach(game => {
       completions += game.Cmp;
       attempts += game.Att;
+      sacks += game.Sack;
+      interceptions += game.Int;
+      passYards += game.PsYds;
+      passTouchDowns += game.PsTD;
+      rushes += game.Rush;
+      rushYards += game.RshYds;
+      rushTouchdowns += game.RshTD;
 
-      
     })
-    return { attempts, completions, completionPercentage: completions/attempts }
+    return { 
+      attempts, 
+      completions, 
+      completionPercentage: completions/attempts,
+      yardsPerAttempt: passYards/attempts,
+      sacks,
+      interceptions,
+      passYards,
+      passTouchDowns,
+      rushes,
+      rushYards,
+      rushTouchdowns
+    }
   }
 
  
   return (
     <section>
-      <h1>Who Do you want to Compare?</h1>
+      <h1 id="title">Who Do you want to Compare?</h1>
       <div id="player-1">
         <select id="select-player-1" placeholder="Pick a player..." onChange={(event) => setPlayer1Id(event.target.value)}>
           <option value=''>Select a Player</option>
@@ -137,14 +155,59 @@ function App() {
         </select>
         <div>
           <h3>Completion Percentage</h3>
-            
             {player1 &&
-              <h5>attemps: {getStats(player1).attempts}, completions: {getStats(player1).completions}, percentage: {getStats(player1).completionPercentage}</h5>
+              <h5>{(Math.round(getStats(player1).completionPercentage * 1000000) /10000)}%</h5>
             }
-
-          <p> </p>
         </div>
-        
+        <div>
+          <h3>Yards per Attempt</h3>
+          {player1 &&
+              <h5>{(Math.round(getStats(player1).yardsPerAttempt * 100) /100)} yds</h5>
+            }
+        </div>
+        <div>
+          <h3>Other Stats</h3>
+            {player1 && 
+              <table>
+                <tr>
+                  <td>Attempts</td>
+                  <td>{getStats(player1).attempts}</td>
+                </tr>
+                <tr>
+                  <td>Completions</td>
+                  <td>{getStats(player1).completions}</td>
+                </tr>
+                <tr>
+                  <td>Sacks</td>
+                  <td>{getStats(player1).sacks}</td>
+                </tr>
+                <tr>
+                  <td>Interceptions</td>
+                  <td>{getStats(player1).interceptions}</td>
+                </tr>
+                <tr>
+                  <td>Pass Yards</td>
+                  <td>{getStats(player1).passYards}</td>
+                </tr>
+                <tr>
+                  <td>Pass TouchDowns</td>
+                  <td>{getStats(player1).passTouchDowns}</td>
+                </tr>
+                <tr>
+                  <td>Rushes</td>
+                  <td>{getStats(player1).rushes}</td>
+                </tr>
+                <tr>
+                  <td>Rush Yards</td>
+                  <td>{getStats(player1).rushYards}</td>
+                </tr>
+                <tr>
+                  <td>Rush Touchdowns</td>
+                  <td>{getStats(player1).rushTouchdowns}</td>
+                </tr>
+              </table>
+          }
+        </div>
       </div>
       <div id="player-2">
       <select id="select-player-2" placeholder="Pick a player..." onChange={(event) => setPlayer2Id(event.target.value)}>
@@ -152,7 +215,62 @@ function App() {
           {players && players.map((player) => {
             return (<option value={player.playerId} key={`player2${player.playerId}`} >{player.fullName}</option>);
           })}
-        </select>          
+        </select>
+        <div>
+          <h3>Completion Percentage</h3>
+            {player2 &&
+              <h5>{(Math.round(getStats(player2).completionPercentage * 1000000) /10000)}%</h5>
+            }
+        </div>
+        <div>
+          <h3>Yards per Attempt</h3>
+          {player2 &&
+              <h5>{(Math.round(getStats(player2).yardsPerAttempt * 100) /100)} yds</h5>
+            }
+        </div>
+        <div>
+          <h3>Other Stats</h3>
+            {player2 && 
+              <table>
+                <tr>
+                  <td>Attempts</td>
+                  <td>{getStats(player2).attempts}</td>
+                </tr>
+                <tr>
+                  <td>Completions</td>
+                  <td>{getStats(player2).completions}</td>
+                </tr>
+                <tr>
+                  <td>Sacks</td>
+                  <td>{getStats(player2).sacks}</td>
+                </tr>
+                <tr>
+                  <td>Interceptions</td>
+                  <td>{getStats(player2).interceptions}</td>
+                </tr>
+                <tr>
+                  <td>Pass Yards</td>
+                  <td>{getStats(player2).passYards}</td>
+                </tr>
+                <tr>
+                  <td>Pass TouchDowns</td>
+                  <td>{getStats(player2).passTouchDowns}</td>
+                </tr>
+                <tr>
+                  <td>Rushes</td>
+                  <td>{getStats(player2).rushes}</td>
+                </tr>
+                <tr>
+                  <td>Rush Yards</td>
+                  <td>{getStats(player2).rushYards}</td>
+                </tr>
+                <tr>
+                  <td>Rush Touchdowns</td>
+                  <td>{getStats(player2).rushTouchdowns}</td>
+                </tr>
+              </table>
+          }
+        </div>          
       </div>
     </section>
   );
