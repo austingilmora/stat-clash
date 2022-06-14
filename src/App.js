@@ -184,42 +184,45 @@ function App() {
               <div>
                 <h3>Other Stats</h3>
                 <table>
-                  <tr>
-                    <td>Attempts</td>
-                    <td>{getStats(player1).attempts}</td>
-                  </tr>
-                  <tr>
-                    <td>Completions</td>
-                    <td>{getStats(player1).completions}</td>
-                  </tr>
-                  <tr>
-                    <td>Sacks</td>
-                    <td>{getStats(player1).sacks}</td>
-                  </tr>
-                  <tr>
-                    <td>Interceptions</td>
-                    <td>{getStats(player1).interceptions}</td>
-                  </tr>
-                  <tr>
-                    <td>Pass Yards</td>
-                    <td>{getStats(player1).passYards}</td>
-                  </tr>
-                  <tr>
-                    <td>Pass TouchDowns</td>
-                    <td>{getStats(player1).passTouchDowns}</td>
-                  </tr>
-                  <tr>
-                    <td>Rushes</td>
-                    <td>{getStats(player1).rushes}</td>
-                  </tr>
-                  <tr>
-                    <td>Rush Yards</td>
-                    <td>{getStats(player1).rushYards}</td>
-                  </tr>
-                  <tr>
-                    <td>Rush Touchdowns</td>
-                    <td>{getStats(player1).rushTouchdowns}</td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td>Attempts</td>
+                      <td>{getStats(player1).attempts}</td>
+                    </tr>
+                    <tr>
+                      <td>Completions</td>
+                      <td>{getStats(player1).completions}</td>
+                    </tr>
+                    <tr>
+                      <td>Sacks</td>
+                      <td>{getStats(player1).sacks}</td>
+                    </tr>
+                    <tr>
+                      <td>Interceptions</td>
+                      <td>{getStats(player1).interceptions}</td>
+                    </tr>
+                    <tr>
+                      <td>Pass Yards</td>
+                      <td>{getStats(player1).passYards}</td>
+                    </tr>
+                    <tr>
+                      <td>Pass TouchDowns</td>
+                      <td>{getStats(player1).passTouchDowns}</td>
+                    </tr>
+                    <tr>
+                      <td>Rushes</td>
+                      <td>{getStats(player1).rushes}</td>
+                    </tr>
+                    <tr>
+                      <td>Rush Yards</td>
+                      <td>{getStats(player1).rushYards}</td>
+                    </tr>
+                    <tr>
+                      <td>Rush Touchdowns</td>
+                      <td>{getStats(player1).rushTouchdowns}</td>
+                    </tr>
+                  </tbody>
+                  
                 </table>
               </div>
           }
@@ -262,42 +265,44 @@ function App() {
               <div>
                 <h3>Other Stats</h3>
                 <table>
-                <tr>
-                  <td>Attempts</td>
-                  <td>{getStats(player2).attempts}</td>
-                </tr>
-                <tr>
-                  <td>Completions</td>
-                  <td>{getStats(player2).completions}</td>
-                </tr>
-                <tr>
-                  <td>Sacks</td>
-                  <td>{getStats(player2).sacks}</td>
-                </tr>
-                <tr>
-                  <td>Interceptions</td>
-                  <td>{getStats(player2).interceptions}</td>
-                </tr>
-                <tr>
-                  <td>Pass Yards</td>
-                  <td>{getStats(player2).passYards}</td>
-                </tr>
-                <tr>
-                  <td>Pass TouchDowns</td>
-                  <td>{getStats(player2).passTouchDowns}</td>
-                </tr>
-                <tr>
-                  <td>Rushes</td>
-                  <td>{getStats(player2).rushes}</td>
-                </tr>
-                <tr>
-                  <td>Rush Yards</td>
-                  <td>{getStats(player2).rushYards}</td>
-                </tr>
-                <tr>
-                  <td>Rush Touchdowns</td>
-                  <td>{getStats(player2).rushTouchdowns}</td>
-                </tr>
+                  <tbody>
+                    <tr>
+                      <td>Attempts</td>
+                      <td>{getStats(player2).attempts}</td>
+                    </tr>
+                    <tr>
+                      <td>Completions</td>
+                      <td>{getStats(player2).completions}</td>
+                    </tr>
+                    <tr>
+                      <td>Sacks</td>
+                      <td>{getStats(player2).sacks}</td>
+                    </tr>
+                    <tr>
+                      <td>Interceptions</td>
+                      <td>{getStats(player2).interceptions}</td>
+                    </tr>
+                    <tr>
+                      <td>Pass Yards</td>
+                      <td>{getStats(player2).passYards}</td>
+                    </tr>
+                    <tr>
+                      <td>Pass TouchDowns</td>
+                      <td>{getStats(player2).passTouchDowns}</td>
+                    </tr>
+                    <tr>
+                      <td>Rushes</td>
+                      <td>{getStats(player2).rushes}</td>
+                    </tr>
+                    <tr>
+                      <td>Rush Yards</td>
+                      <td>{getStats(player2).rushYards}</td>
+                    </tr>
+                    <tr>
+                      <td>Rush Touchdowns</td>
+                      <td>{getStats(player2).rushTouchdowns}</td>
+                    </tr>
+                  </tbody>
               </table>
               </div>
               
