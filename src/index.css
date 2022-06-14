@@ -14,5 +14,16 @@ code {
 
 section {
   display: flex;
-  
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#title {
+  width: 100%;
+  text-align: center;
+}
+
+img {
+  width: 200 !important;
+  height: 200 !important;
 }

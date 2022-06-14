@@ -1,6 +1,8 @@
 import './App.css';
-import Comparison from './components/Comparison';
 import { useState, useEffect } from 'react'
+import image2543477 from './images/2543477.png'
+import image2543499 from './images/2543499.png'
+import image2560800 from './images/2560800.png'
 
 
 function App() {
@@ -145,7 +147,7 @@ function App() {
  
   return (
     <section>
-      <h1 id="title">Who Do you want to Compare?</h1>
+      <h1 id="title">Who Do You Want to Compare?</h1>
       <div id="player-1">
         <select id="select-player-1" placeholder="Pick a player..." onChange={(event) => setPlayer1Id(event.target.value)}>
           <option value=''>Select a Player</option>
@@ -153,6 +155,12 @@ function App() {
             return (<option value={player.playerId} key={`player1${player.playerId}`} >{player.fullName}</option>);
           })}
         </select>
+        <div>
+          {player1 &&
+            <img src={require(`./images/${player1Id}.png`)} alt={player1.fullName} />
+          }
+        </div>
+        
         <div>
           <h3>Completion Percentage</h3>
             {player1 &&
@@ -216,6 +224,11 @@ function App() {
             return (<option value={player.playerId} key={`player2${player.playerId}`} >{player.fullName}</option>);
           })}
         </select>
+        <div>
+          {player2 &&
+            <img src={require(`./images/${player2Id}.png`)} alt={player2.fullName} />
+          }
+        </div>
         <div>
           <h3>Completion Percentage</h3>
             {player2 &&
